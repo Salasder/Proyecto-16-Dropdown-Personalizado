@@ -1,0 +1,126 @@
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* Contenedor principal */
+
+.contenedor {
+    width: 350px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+
+/* Menú desplegable */
+
+.desplegable {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Botón principal */
+
+.boton-desplegable {
+    width: 100%;
+    padding: 14px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* Lista de opciones */
+
+.lista-opciones {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 6px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 15px;
+    list-style: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+
+/* Mostrar lista */
+
+.lista-opciones.abierta {
+    display: block;
+}
+
+
+/* Cada opción */
+
+.lista-opciones li {
+    padding: 15px;
+    border-bottom: 1px solid #777;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.lista-opciones li:last-child {
+    border-bottom: none;
+}
+
+.lista-opciones li:hover {
+    background-color: #eeeeee;
+}
+
+
+/* Opción seleccionada */
+
+.lista-opciones li.seleccionada {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    position: relative;
+}
+
+.lista-opciones li.seleccionada::after {
+    content: "✓";
+    position: absolute;
+    right: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+/* Flecha */
+
+#flecha {
+    font-size: 20px;
+}
